@@ -157,6 +157,9 @@ const GlobalStyle = createGlobalStyle`
       background-color: darkgray;
       border-radius: 10px;
     }
+    &::-webkit-scrollbar-track {
+      background-color: #fff;
+    }
   }
   
   body {
