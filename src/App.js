@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <GlobalStyle/>
-      <Route path={['/game/:id', "/"]} component={Home}/>
+      <Route path={['/game/:id', '/']} component={Home}/>
     </div>
   );
 }
