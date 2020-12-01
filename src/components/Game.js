@@ -1,6 +1,7 @@
 import {useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {loadDetails} from '../actions/detailsAction'
+import {smallImage} from '../utils'
 import {motion} from 'framer-motion'
 import styled from 'styled-components'
 
@@ -17,7 +18,7 @@ const Game = ({name, released, image, id}) => {
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>
-        <img src={image} alt={name}/>
+        <img src={smallImage(image, 640)} alt={name}/>
       </Link>
     </StyledGame>
   )
