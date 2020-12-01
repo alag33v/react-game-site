@@ -9,6 +9,8 @@ import xbox from '../images/xbox.svg'
 import nintendo from '../images/nintendo.svg'
 import apple from '../images/apple.svg'
 import gamepad from '../images/gamepad.svg'
+import starEmpty from '../images/star-empty.png'
+import starFull from '../images/star-full.png'
 
 const GameDetails = ({pathId}) => {
   const history = useHistory()
@@ -21,6 +23,19 @@ const GameDetails = ({pathId}) => {
       document.body.style.marginRight = '0'
       history.push('/')
     }
+  }
+  
+  const getStars = () => {
+    const stars = []
+    const rating = Math.floor(game.rating)
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<img key={i} src={starFull} alt=""/>)
+      } else {
+        stars.push(<img key={i} src={starEmpty} alt=""/>)
+      }
+    }
+    return stars
   }
   
   const getPlatform = (platform) => {
@@ -51,6 +66,7 @@ const GameDetails = ({pathId}) => {
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
+                {getStars()}
               </div>
               <Info>
                 <h3>Platforms</h3>
@@ -120,6 +136,11 @@ const Stats = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  img {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+  }
 `
 
 const Info = styled(motion.div)`
