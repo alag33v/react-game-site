@@ -4,7 +4,7 @@ import {smallImage} from '../utils'
 import {motion} from 'framer-motion'
 import styled from 'styled-components'
 
-const GameDetails = () => {
+const GameDetails = ({pathId}) => {
   const history = useHistory()
   
   const exitDetailsHandler = (e) => {
@@ -23,10 +23,10 @@ const GameDetails = () => {
     <>
       {!isLoading && (
         <CardShadow className="shadow" onClick={exitDetailsHandler}>
-          <Details>
+          <Details layoutId={pathId}>
             <Stats>
               <div className="rating">
-                <h3>{game.name}</h3>
+                <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
               </div>
               <Info>
@@ -39,7 +39,7 @@ const GameDetails = () => {
               </Info>
             </Stats>
             <Media>
-              <img src={smallImage(game.background_image, 1280)} alt=""/>
+              <motion.img layoutId={`image ${pathId}`} src={smallImage(game.background_image, 1280)} alt=""/>
             </Media>
             <Description>
               <p>{game.description_raw}</p>

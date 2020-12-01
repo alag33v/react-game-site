@@ -13,12 +13,14 @@ const Game = ({name, released, image, id}) => {
     dispatch(loadDetails(id))
   }
   
+  const StringPathId = id.toString()
+  
   return (
-    <StyledGame onClick={loadDetailsHandler}>
+    <StyledGame layoutId={StringPathId} onClick={loadDetailsHandler}>
       <Link to={`/game/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${StringPathId}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={smallImage(image, 640)} alt={name}/>
+        <motion.img layoutId={`image ${StringPathId}`} src={smallImage(image, 640)} alt={name}/>
       </Link>
     </StyledGame>
   )
