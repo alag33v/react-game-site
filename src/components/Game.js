@@ -7,6 +7,8 @@ import styled from 'styled-components'
 const Game = ({name, released, image, id}) => {
   const dispatch = useDispatch()
   const loadDetailsHandler = () => {
+    document.body.style.overflow = 'hidden'
+    document.body.style.marginRight = '8px'
     dispatch(loadDetails(id))
   }
   
@@ -26,6 +28,7 @@ const StyledGame = styled(motion.div)`
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
   min-height: 30vh;
+  overflow: hidden;
   cursor: pointer;
   img {
     width: 100%;
