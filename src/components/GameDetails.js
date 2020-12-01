@@ -3,6 +3,12 @@ import {useHistory} from 'react-router-dom'
 import {smallImage} from '../utils'
 import {motion} from 'framer-motion'
 import styled from 'styled-components'
+import steam from '../images/steam.svg'
+import playstation from '../images/playstation.svg'
+import xbox from '../images/xbox.svg'
+import nintendo from '../images/nintendo.svg'
+import apple from '../images/apple.svg'
+import gamepad from '../images/gamepad.svg'
 
 const GameDetails = ({pathId}) => {
   const history = useHistory()
@@ -14,6 +20,23 @@ const GameDetails = ({pathId}) => {
       document.body.style.overflow = "auto"
       document.body.style.marginRight = '0'
       history.push('/')
+    }
+  }
+  
+  const getPlatform = (platform) => {
+    switch (platform) {
+      case "PC":
+        return steam
+      case "PlayStation 4":
+        return playstation
+      case "Xbox One":
+        return xbox
+      case "Nintendo Switch":
+        return nintendo
+      case "IOS":
+        return apple
+      default:
+        return gamepad
     }
   }
   
@@ -33,7 +56,7 @@ const GameDetails = ({pathId}) => {
                 <h3>Platforms</h3>
                 <Platforms>
                   {game.platforms.map(data => (
-                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                    <img key={data.platform.id} src={getPlatform(data.platform.name)} alt={data.platform.name}/>
                   ))}
                 </Platforms>
               </Info>
@@ -62,6 +85,7 @@ const CardShadow = styled(motion.div)`
   top: 0;
   left: 0;
   position: fixed;
+  z-index: 5;
   overflow-y: scroll;
   min-height: 100vh;
   &::-webkit-scrollbar {
@@ -84,6 +108,7 @@ const Details = styled(motion.div)`
   padding: 25px 75px;
   left: 10%;
   position: absolute;
+  z-index: 10;
   img {
     width: 100%;
     max-width: 100%;
