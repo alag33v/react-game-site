@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/react-game-site/static/js/main.77f95fc2.chunk.js",
+    "main.js.map": "/react-game-site/static/js/main.77f95fc2.chunk.js.map",
+    "runtime-main.js": "/react-game-site/static/js/runtime-main.1b0abbc1.js",
+    "runtime-main.js.map": "/react-game-site/static/js/runtime-main.1b0abbc1.js.map",
+    "static/js/2.5212f152.chunk.js": "/react-game-site/static/js/2.5212f152.chunk.js",
+    "static/js/2.5212f152.chunk.js.map": "/react-game-site/static/js/2.5212f152.chunk.js.map",
+    "static/js/3.f09b571c.chunk.js": "/react-game-site/static/js/3.f09b571c.chunk.js",
+    "static/js/3.f09b571c.chunk.js.map": "/react-game-site/static/js/3.f09b571c.chunk.js.map",
+    "index.html": "/react-game-site/index.html",
+    "static/js/2.5212f152.chunk.js.LICENSE.txt": "/react-game-site/static/js/2.5212f152.chunk.js.LICENSE.txt",
+    "static/media/apple.9a448138.svg": "/react-game-site/static/media/apple.9a448138.svg",
+    "static/media/gamepad.c3535795.svg": "/react-game-site/static/media/gamepad.c3535795.svg",
+    "static/media/logo.91bf6953.svg": "/react-game-site/static/media/logo.91bf6953.svg",
+    "static/media/nintendo.da2a7b5f.svg": "/react-game-site/static/media/nintendo.da2a7b5f.svg",
+    "static/media/playstation.f0a74f41.svg": "/react-game-site/static/media/playstation.f0a74f41.svg",
+    "static/media/star-empty.a8b3e3a2.svg": "/react-game-site/static/media/star-empty.a8b3e3a2.svg",
+    "static/media/star-full.49b69529.svg": "/react-game-site/static/media/star-full.49b69529.svg",
+    "static/media/steam.304e8415.svg": "/react-game-site/static/media/steam.304e8415.svg",
+    "static/media/xbox.2eba2631.svg": "/react-game-site/static/media/xbox.2eba2631.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b0abbc1.js",
+    "static/js/2.5212f152.chunk.js",
+    "static/js/main.77f95fc2.chunk.js"
+  ]
+}
