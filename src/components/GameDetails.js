@@ -9,8 +9,8 @@ import xbox from '../images/xbox.svg'
 import nintendo from '../images/nintendo.svg'
 import apple from '../images/apple.svg'
 import gamepad from '../images/gamepad.svg'
-import starEmpty from '../images/star-empty.png'
-import starFull from '../images/star-full.png'
+import starEmpty from '../images/star-empty.svg'
+import starFull from '../images/star-full.svg'
 
 const GameDetails = ({pathId}) => {
   const history = useHistory()
@@ -27,7 +27,7 @@ const GameDetails = ({pathId}) => {
   
   const getStars = () => {
     const stars = []
-    const rating = Math.floor(game.rating)
+    const rating = Math.round(game.rating)
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
         stars.push(<img key={i} src={starFull} alt=""/>)
@@ -130,33 +130,64 @@ const Details = styled(motion.div)`
     max-width: 100%;
     display: block;
   }
+  @media (max-width: 950px) {
+    padding: 10px 30px 25px;
+  }
 `
 
 const Stats = styled(motion.div)`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
   img {
     width: 26px;
     height: 26px;
     display: inline-block;
   }
+  @media (max-width: 950px) {
+    flex-direction: column;
+    text-align: center;
+    h3 {
+     text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    img {
+      margin: 0 auto;
+    }
+  }
 `
 
 const Info = styled(motion.div)`
   text-align: center;
+  padding-left: 50px;
+  h3 {
+    text-align: right;
+  }
+  @media (max-width: 950px) {
+    padding-left: 0;
+    h3 {
+     text-align: center;
+    }
+  }
 `
 
 const Platforms = styled(motion.div)`
   display: flex;
-  h3 {
-    margin-right: 60px;
-    &:last-child {
-    margin-right: 0;
-    }
-  }
+  flex-wrap: wrap;
   img {
+    width: 40px;
+    height: 40px;
     margin-left: 35px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  @media (max-width: 950px) {
+    justify-content: center;
+    img {
+      margin: 0 25px 20px;
+    }
   }
 `
 
@@ -171,6 +202,17 @@ const Media = styled(motion.div)`
 
 const Description = styled(motion.div)`
   margin: 50px 0;
+  @media (max-width: 780px) {
+    margin: 25px 0;
+    p {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      font-size: 14px;
+    }
+  }
 `
 
 export default GameDetails

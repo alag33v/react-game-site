@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+## Game app on ReactJS + Redux
+
+[Open project](https://alag33v.github.io/react-game-site/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
